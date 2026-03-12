@@ -1,94 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Academia de Marketing Digital</title>
 
 <style>
+
 body{
-background:#0b1b2b;
-color:white;
+margin:0;
 font-family:Arial;
+background:#0f172a;
+color:white;
 text-align:center;
-padding:20px;
+}
+
+header{
+background:url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d") center/cover;
+padding:80px 20px;
+}
+
+header h1{
+font-size:32px;
+}
+
+section{
+padding:30px 20px;
 }
 
 .caixa{
-background:#1e2f44;
+background:#1e293b;
 padding:20px;
-margin:20px;
+margin:20px auto;
 border-radius:10px;
+max-width:600px;
 }
 
-h1{
-color:#2ecc71;
+h2{
+color:#22c55e;
 }
 
 .preco{
-color:#2ecc71;
 font-size:28px;
+color:#22c55e;
 }
 
 .botao{
-background:#25D366;
-color:white;
-padding:15px 25px;
-text-decoration:none;
-border-radius:8px;
-font-size:18px;
 display:inline-block;
-margin-top:20px;
+background:#25D366;
+padding:15px 25px;
+border-radius:8px;
+text-decoration:none;
+color:white;
+font-size:18px;
+margin-top:15px;
 }
 
-.vagas{
+.botao:hover{
+background:#1ebe5d;
+}
+
+.depoimento{
+background:#1e293b;
+margin:10px;
+padding:15px;
+border-radius:8px;
+}
+
+#contador{
+font-size:22px;
 color:#ff5252;
 font-weight:bold;
 }
-</style>
 
+.whatsapp-fixo{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:22px;
+text-decoration:none;
+}
+
+</style>
 </head>
 
 <body>
 
-<h1>Academia de Marketing Digital</h1>
-<p>Fundador: António Júnior</p>
+<header>
+<h1>Ganhe dinheiro na internet usando apenas seu celular</h1>
+<p>Aprenda marketing digital passo a passo</p>
+</header>
 
-<div class="caixa">
-<h2>Aprenda a ganhar dinheiro na internet</h2>
-<p>Descubra como ganhar dinheiro usando apenas o seu celular.</p>
-</div>
+<section class="caixa">
+<h2>Sobre o Fundador</h2>
+<p>
+O fundador da Academia de Marketing Digital é <b>António Júnior</b>.
+Ele estuda marketing digital há anos e tem ajudado iniciantes a entender
+como começar na internet e fazer a primeira renda online usando apenas o celular.
+</p>
+</section>
 
-<div class="caixa">
-<h2>Cursos disponíveis</h2>
+<section class="caixa">
+<h2>O que você vai aprender</h2>
+
 <p>✔ Como ganhar dinheiro no WhatsApp</p>
 <p>✔ Como vender no Facebook</p>
-<p>✔ Como vender no Instagram</p>
+<p>✔ Como crescer no Instagram</p>
 <p>✔ Como ganhar dinheiro no TikTok</p>
-<p>✔ Como ganhar dinheiro no YouTube</p>
+<p>✔ Como criar conteúdo para YouTube</p>
 <p>✔ Como vender na Hotmart</p>
 <p>✔ Como vender na ClickBank</p>
-</div>
 
-<div class="caixa">
+</section>
+
+<section class="caixa">
 <h2>Preço do Curso</h2>
+
 <p><s>500 MZN</s></p>
+
 <p class="preco">Promoção: 250 MZN</p>
-<p class="vagas">⚠ Restam apenas 10 vagas nesta promoção</p>
-</div>
 
-<div class="caixa">
-<h2>Formas de pagamento</h2>
-<p>M-Pesa</p>
-<p>e-Mola</p>
-</div>
+<p>⏳ Promoção termina em:</p>
 
-<div class="caixa">
-<h2>Depoimento</h2>
-<p>"Eu consegui minha primeira venda online depois deste curso." ⭐⭐⭐⭐⭐</p>
-</div>
+<div id="contador"></div>
 
 <a class="botao" href="https://wa.me/258858829688?text=Olá%20quero%20comprar%20o%20curso%20de%20marketing%20digital">
 Comprar pelo WhatsApp
 </a>
+
+</section>
+
+<section>
+<h2>Depoimentos de alunos</h2>
+
+<div class="depoimento">
+"Depois deste curso consegui fazer minha primeira venda online."
+⭐⭐⭐⭐⭐
+</div>
+
+<div class="depoimento">
+"Aprendi a usar o WhatsApp para vender. Muito bom!"
+⭐⭐⭐⭐⭐
+</div>
+
+<div class="depoimento">
+"Explicação simples e fácil para iniciantes."
+⭐⭐⭐⭐⭐
+</div>
+
+</section>
+
+<a class="whatsapp-fixo"
+href="https://wa.me/258858829688?text=Olá%20quero%20comprar%20o%20curso">
+💬
+</a>
+
+<script>
+
+var dataFinal = new Date().getTime() + (24 * 60 * 60 * 1000);
+
+var contador = setInterval(function(){
+
+var agora = new Date().getTime();
+
+var distancia = dataFinal - agora;
+
+var horas = Math.floor((distancia % (1000*60*60*24))/(1000*60*60));
+var minutos = Math.floor((distancia % (1000*60*60))/(1000*60));
+var segundos = Math.floor((distancia % (1000*60))/1000);
+
+document.getElementById("contador").innerHTML =
+horas + "h " + minutos + "m " + segundos + "s";
+
+if(distancia < 0){
+clearInterval(contador);
+document.getElementById("contador").innerHTML = "Promoção encerrada";
+}
+
+},1000);
+
+</script>
 
 </body>
 </html>
