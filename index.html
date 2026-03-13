@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,11 +19,11 @@ text-align:center;
 
 header{
 background:url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d") center/cover;
-padding:80px 20px;
+padding:90px 20px;
 }
 
 header h1{
-font-size:32px;
+font-size:34px;
 }
 
 section{
@@ -31,10 +32,10 @@ padding:30px 20px;
 
 .caixa{
 background:#1e293b;
-padding:20px;
+padding:25px;
 margin:20px auto;
 border-radius:10px;
-max-width:600px;
+max-width:700px;
 }
 
 h2{
@@ -42,7 +43,7 @@ color:#22c55e;
 }
 
 .preco{
-font-size:28px;
+font-size:30px;
 color:#22c55e;
 }
 
@@ -54,7 +55,7 @@ border-radius:8px;
 text-decoration:none;
 color:white;
 font-size:18px;
-margin-top:15px;
+margin-top:20px;
 }
 
 .botao:hover{
@@ -63,9 +64,10 @@ background:#1ebe5d;
 
 .depoimento{
 background:#1e293b;
-margin:10px;
 padding:15px;
+margin:10px auto;
 border-radius:8px;
+max-width:600px;
 }
 
 #contador{
@@ -74,38 +76,51 @@ color:#ff5252;
 font-weight:bold;
 }
 
-.whatsapp-fixo{
+.whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:15px;
+padding:16px;
 border-radius:50%;
-font-size:22px;
+font-size:24px;
 text-decoration:none;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
+
 <h1>Ganhe dinheiro na internet usando apenas seu celular</h1>
+
 <p>Aprenda marketing digital passo a passo</p>
+
+<a class="botao"
+href="https://wa.me/258858829688?text=Olá%20quero%20comprar%20o%20curso%20de%20marketing%20digital">
+Comprar pelo WhatsApp
+</a>
+
 </header>
 
 <section class="caixa">
+
 <h2>Sobre o Fundador</h2>
+
 <p>
 O fundador da Academia de Marketing Digital é <b>António Júnior</b>.
-Ele estuda marketing digital há anos e tem ajudado iniciantes a entender
+Ele estuda marketing digital há anos e ajuda iniciantes a aprender
 como começar na internet e fazer a primeira renda online usando apenas o celular.
 </p>
+
 </section>
 
 <section class="caixa">
+
 <h2>O que você vai aprender</h2>
 
 <p>✔ Como ganhar dinheiro no WhatsApp</p>
@@ -119,6 +134,7 @@ como começar na internet e fazer a primeira renda online usando apenas o celula
 </section>
 
 <section class="caixa">
+
 <h2>Preço do Curso</h2>
 
 <p><s>500 MZN</s></p>
@@ -129,17 +145,19 @@ como começar na internet e fazer a primeira renda online usando apenas o celula
 
 <div id="contador"></div>
 
-<a class="botao" href="https://wa.me/258858829688?text=Olá%20quero%20comprar%20o%20curso%20de%20marketing%20digital">
+<a class="botao"
+href="https://wa.me/258858829688?text=Olá%20quero%20comprar%20o%20curso%20de%20marketing%20digital">
 Comprar pelo WhatsApp
 </a>
 
 </section>
 
 <section>
+
 <h2>Depoimentos de alunos</h2>
 
 <div class="depoimento">
-"Depois deste curso consegui fazer minha primeira venda online."
+"Depois deste curso consegui minha primeira venda online."
 ⭐⭐⭐⭐⭐
 </div>
 
@@ -149,13 +167,23 @@ Comprar pelo WhatsApp
 </div>
 
 <div class="depoimento">
-"Explicação simples e fácil para iniciantes."
+"Explicação simples e perfeita para iniciantes."
 ⭐⭐⭐⭐⭐
 </div>
 
 </section>
 
-<a class="whatsapp-fixo"
+<section class="caixa">
+
+<h2>Garantias</h2>
+
+<p>🔒 Pagamento seguro</p>
+<p>📩 Entrega imediata após pagamento</p>
+<p>📱 Suporte direto no WhatsApp</p>
+
+</section>
+
+<a class="whatsapp"
 href="https://wa.me/258858829688?text=Olá%20quero%20comprar%20o%20curso">
 💬
 </a>
@@ -178,8 +206,11 @@ document.getElementById("contador").innerHTML =
 horas + "h " + minutos + "m " + segundos + "s";
 
 if(distancia < 0){
+
 clearInterval(contador);
+
 document.getElementById("contador").innerHTML = "Promoção encerrada";
+
 }
 
 },1000);
