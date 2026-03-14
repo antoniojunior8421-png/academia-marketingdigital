@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="pt">
 <head>
 
@@ -19,34 +18,95 @@ text-align:center;
 }
 
 header{
-background:#1e293b;
-padding:60px 20px;
-}
-
-h1{
-color:#22c55e;
-}
-
-section{
-padding:30px;
-}
-
-.caixa{
-background:#1e293b;
-margin:20px;
+background:#020617;
 padding:20px;
-border-radius:10px;
+}
+
+.logo{
+font-size:24px;
+color:#22c55e;
+font-weight:bold;
+}
+
+.hero{
+padding:60px 20px;
+background:linear-gradient(135deg,#020617,#0f172a);
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.hero p{
+font-size:18px;
+opacity:0.9;
 }
 
 .botao{
 display:inline-block;
-background:#25D366;
-padding:15px 25px;
-border-radius:8px;
-text-decoration:none;
+margin-top:20px;
+background:#22c55e;
+padding:15px 30px;
+border-radius:10px;
 color:white;
+text-decoration:none;
 font-size:18px;
+}
+
+.contador{
+font-size:24px;
+margin-top:20px;
+color:#22c55e;
+}
+
+.secao{
+padding:50px 20px;
+}
+
+.caixas{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.caixa{
+background:#1e293b;
 margin:10px;
+padding:20px;
+border-radius:10px;
+width:250px;
+}
+
+.depoimentos{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.depoimento{
+background:#1e293b;
+padding:20px;
+margin:10px;
+border-radius:10px;
+width:260px;
+}
+
+footer{
+margin-top:40px;
+padding:20px;
+background:#020617;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
 }
 
 </style>
@@ -57,44 +117,125 @@ margin:10px;
 
 <header>
 
-<h1>Academia de Marketing Digital</h1>
+<div class="logo">
+Academia de Marketing Digital
+</div>
+
+</header>
+
+<section class="hero">
+
+<h1>Aprenda a ganhar dinheiro usando apenas o celular</h1>
 
 <p>
-Aprenda a ganhar dinheiro na internet usando apenas o seu celular
+Descubra estratégias reais de marketing digital
+mesmo se você estiver começando do zero.
 </p>
 
 <a class="botao" href="cursos.html">
 Ver cursos disponíveis
 </a>
 
-<a class="botao"
-href="https://wa.me/258858829688?text=Olá%20quero%20comprar%20o%20curso">
-Comprar pelo WhatsApp
-</a>
+<div class="contador" id="contador"></div>
 
-</header>
+</section>
 
-<section class="caixa">
+<section class="secao">
 
-<h2>Sobre o Fundador</h2>
+<h2>O que você vai aprender</h2>
 
-<p>
-O fundador é António Júnior, estudante de marketing digital há anos,
-que ajuda iniciantes a aprender como ganhar dinheiro online usando apenas o celular.
+<div class="caixas">
+
+<div class="caixa">
+📱 Ganhar dinheiro nas redes sociais
+</div>
+
+<div class="caixa">
+💻 Trabalhar pela internet
+</div>
+
+<div class="caixa">
+💰 Fazer sua primeira venda online
+</div>
+
+<div class="caixa">
+🚀 Criar negócios digitais
+</div>
+
+</div>
+
+</section>
+
+<section class="secao">
+
+<h2>Sobre o fundador</h2>
+
+<p style="max-width:700px;margin:auto;">
+António Júnior estuda marketing digital há anos e entende as dificuldades
+de quem está começando. O objetivo da academia é ajudar iniciantes a
+fazer a primeira renda online usando apenas o celular.
 </p>
 
 </section>
 
-<section class="caixa">
+<section class="secao">
 
-<h2>Por que aprender Marketing Digital?</h2>
+<h2>Depoimentos de alunos</h2>
 
-<p>✔ Trabalhar usando apenas o celular</p>
-<p>✔ Criar renda extra online</p>
-<p>✔ Aprender habilidades digitais</p>
-<p>✔ Fazer vendas na internet</p>
+<div class="depoimentos">
+
+<div class="depoimento">
+⭐⭐⭐⭐⭐<br><br>
+Comprei o curso e consegui fazer minha primeira venda online.
+</div>
+
+<div class="depoimento">
+⭐⭐⭐⭐⭐<br><br>
+Explicação simples e fácil de entender.
+</div>
+
+<div class="depoimento">
+⭐⭐⭐⭐⭐<br><br>
+Aprendi formas reais de ganhar dinheiro pela internet.
+</div>
+
+</div>
 
 </section>
+
+<footer>
+
+<p>© 2026 Academia de Marketing Digital</p>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/258858829688">
+WhatsApp
+</a>
+
+<script>
+
+var tempo = 3600;
+
+function atualizar(){
+
+var horas = Math.floor(tempo/3600);
+var minutos = Math.floor((tempo%3600)/60);
+var segundos = tempo%60;
+
+document.getElementById("contador").innerHTML =
+"Promoção termina em: "
++ horas + "h "
++ minutos + "m "
++ segundos + "s";
+
+tempo--;
+
+}
+
+setInterval(atualizar,1000);
+
+</script>
 
 </body>
 </html>
