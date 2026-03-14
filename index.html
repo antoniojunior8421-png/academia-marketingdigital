@@ -19,13 +19,22 @@ text-align:center;
 
 header{
 background:#020617;
-padding:20px;
+padding:15px;
+position:sticky;
+top:0;
 }
 
 .logo{
-font-size:24px;
+font-size:22px;
 color:#22c55e;
 font-weight:bold;
+}
+
+.menu a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-size:16px;
 }
 
 .hero{
@@ -34,27 +43,22 @@ background:linear-gradient(135deg,#020617,#0f172a);
 }
 
 .hero h1{
-font-size:32px;
-}
-
-.hero p{
-font-size:18px;
-opacity:0.9;
+font-size:30px;
 }
 
 .botao{
 display:inline-block;
-margin-top:20px;
 background:#22c55e;
 padding:15px 30px;
 border-radius:10px;
 color:white;
 text-decoration:none;
 font-size:18px;
+margin-top:20px;
 }
 
 .contador{
-font-size:24px;
+font-size:22px;
 margin-top:20px;
 color:#22c55e;
 }
@@ -63,18 +67,18 @@ color:#22c55e;
 padding:50px 20px;
 }
 
-.caixas{
+.cards{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
 }
 
-.caixa{
+.card{
 background:#1e293b;
-margin:10px;
 padding:20px;
-border-radius:10px;
-width:250px;
+margin:10px;
+border-radius:12px;
+width:240px;
 }
 
 .depoimentos{
@@ -91,10 +95,26 @@ border-radius:10px;
 width:260px;
 }
 
-footer{
-margin-top:40px;
-padding:20px;
+.bonus{
 background:#020617;
+padding:40px;
+}
+
+.bonus div{
+margin:10px;
+}
+
+.garantia{
+background:#1e293b;
+padding:30px;
+margin:30px;
+border-radius:12px;
+}
+
+footer{
+background:#020617;
+padding:20px;
+margin-top:40px;
 }
 
 .whatsapp{
@@ -102,9 +122,9 @@ position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
-color:white;
 padding:15px 20px;
 border-radius:50px;
+color:white;
 text-decoration:none;
 font-weight:bold;
 }
@@ -121,6 +141,12 @@ font-weight:bold;
 Academia de Marketing Digital
 </div>
 
+<div class="menu">
+<a href="index.html">Início</a>
+<a href="cursos.html">Cursos</a>
+<a href="#sobre">Sobre</a>
+</div>
+
 </header>
 
 <section class="hero">
@@ -128,8 +154,7 @@ Academia de Marketing Digital
 <h1>Aprenda a ganhar dinheiro usando apenas o celular</h1>
 
 <p>
-Descubra estratégias reais de marketing digital
-mesmo se você estiver começando do zero.
+Descubra estratégias de marketing digital mesmo começando do zero.
 </p>
 
 <a class="botao" href="cursos.html">
@@ -142,51 +167,40 @@ Ver cursos disponíveis
 
 <section class="secao">
 
-<h2>O que você vai aprender</h2>
+<h2>Por que aprender marketing digital?</h2>
 
-<div class="caixas">
+<div class="cards">
 
-<div class="caixa">
-📱 Ganhar dinheiro nas redes sociais
-</div>
-
-<div class="caixa">
-💻 Trabalhar pela internet
-</div>
-
-<div class="caixa">
-💰 Fazer sua primeira venda online
-</div>
-
-<div class="caixa">
-🚀 Criar negócios digitais
-</div>
+<div class="card">📱 Trabalhar usando apenas o celular</div>
+<div class="card">💰 Fazer renda extra</div>
+<div class="card">🌍 Trabalhar de qualquer lugar</div>
+<div class="card">🚀 Criar negócios digitais</div>
 
 </div>
 
 </section>
 
-<section class="secao">
+<section class="secao" id="sobre">
 
-<h2>Sobre o fundador</h2>
+<h2>Sobre o Fundador</h2>
 
 <p style="max-width:700px;margin:auto;">
 António Júnior estuda marketing digital há anos e entende as dificuldades
-de quem está começando. O objetivo da academia é ajudar iniciantes a
-fazer a primeira renda online usando apenas o celular.
+de quem está começando. Ele criou a Academia de Marketing Digital
+para ajudar iniciantes a fazer a primeira renda online.
 </p>
 
 </section>
 
 <section class="secao">
 
-<h2>Depoimentos de alunos</h2>
+<h2>Resultados de alunos</h2>
 
 <div class="depoimentos">
 
 <div class="depoimento">
 ⭐⭐⭐⭐⭐<br><br>
-Comprei o curso e consegui fazer minha primeira venda online.
+Consegui minha primeira venda pela internet.
 </div>
 
 <div class="depoimento">
@@ -196,16 +210,40 @@ Explicação simples e fácil de entender.
 
 <div class="depoimento">
 ⭐⭐⭐⭐⭐<br><br>
-Aprendi formas reais de ganhar dinheiro pela internet.
+Aprendi várias formas de ganhar dinheiro online.
 </div>
 
 </div>
 
 </section>
 
+<section class="bonus">
+
+<h2>Bónus especiais</h2>
+
+<div>🎁 Guia para vender no WhatsApp</div>
+<div>🎁 Estratégia para conseguir clientes</div>
+<div>🎁 Lista de ideias de negócios online</div>
+<div>🎁 Técnicas de vendas nas redes sociais</div>
+
+</section>
+
+<section class="garantia">
+
+<h2>Garantia de satisfação</h2>
+
+<p>
+Se seguir as estratégias ensinadas no curso,
+você poderá começar sua jornada no marketing digital.
+</p>
+
+</section>
+
 <footer>
 
 <p>© 2026 Academia de Marketing Digital</p>
+
+<p>Suporte pelo WhatsApp</p>
 
 </footer>
 
@@ -215,7 +253,7 @@ WhatsApp
 
 <script>
 
-var tempo = 3600;
+var tempo = 7200;
 
 function atualizar(){
 
@@ -238,4 +276,4 @@ setInterval(atualizar,1000);
 </script>
 
 </body>
-</html>
+  </html>
