@@ -1,90 +1,89 @@
-here<!DOCTYPE html>
-<html lang="pt">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Academia de Marketing Digital</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+body{
+  margin:0;
+  font-family:Poppins;
+  background:#0f172a;
+  color:#fff;
+}
 
-<body>
+.nav{
+  display:flex;
+  justify-content:space-between;
+  padding:15px;
+  background:#020617;
+}
 
-<!-- HERO -->
-<header class="hero">
-  <div class="overlay">
-    <h1>Academia de Marketing Digital</h1>
-    <p>Aprenda a ganhar dinheiro online usando apenas o seu celular</p>
-    <a class="btn" href="https://wa.me/258858829688" target="_blank">Comprar pelo WhatsApp</a>
-  </div>
-</header>
+.nav a{
+  color:white;
+  margin:0 10px;
+  text-decoration:none;
+}
 
-<!-- SOBRE -->
-<section class="section">
-  <h2>Sobre o Fundador</h2>
-  <p>António Júnior estuda marketing digital há anos e ajuda iniciantes a fazer sua primeira renda online com estratégias simples e práticas.</p>
-</section>
+.hero{
+  height:100vh;
+  background:url('https://images.unsplash.com/photo-1492724441997-5dc865305da7') center/cover;
+}
 
-<!-- O QUE VAI APRENDER -->
-<section class="section dark">
-  <h2>O que você vai aprender</h2>
-  <ul>
-    <li>Ganhar dinheiro com WhatsApp</li>
-    <li>Vendas no Instagram e Facebook</li>
-    <li>Marketing no TikTok e YouTube</li>
-    <li>Hotmart e ClickBank</li>
-    <li>Criação de eBooks</li>
-  </ul>
-</section>
+.overlay{
+  background:rgba(0,0,0,0.7);
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
 
-<!-- CURSOS -->
-<section class="section">
-  <h2>Cursos Disponíveis</h2>
+.logo{
+  width:120px;
+  margin-bottom:20px;
+}
 
-  <div class="grid">
+.btn{
+  background:#22c55e;
+  padding:12px 20px;
+  border-radius:8px;
+  text-decoration:none;
+  color:white;
+}
 
-    <div class="card">
-      <h3>Redes Sociais</h3>
-      <a href="cursos.html" class="btn-small">Ver Cursos</a>
-    </div>
+.section{
+  padding:40px;
+  text-align:center;
+}
 
-    <div class="card">
-      <h3>Hotmart</h3>
-      <a href="#" class="btn-small">Abrir</a>
-    </div>
+.dark{
+  background:#1e293b;
+}
 
-    <div class="card">
-      <h3>ClickBank</h3>
-      <a href="#" class="btn-small">Abrir</a>
-    </div>
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+}
 
-    <div class="card">
-      <h3>eBooks</h3>
-      <a href="#" class="btn-small">Abrir</a>
-    </div>
+.card{
+  background:#111827;
+  padding:20px;
+  border-radius:10px;
+}
 
-  </div>
-</section>
+.card img{
+  width:50px;
+}
 
-<!-- DEPOIMENTOS -->
-<section class="section dark">
-  <h2>Depoimentos</h2>
+.stats{
+  display:flex;
+  justify-content:space-around;
+  padding:20px;
+  background:#020617;
+}
 
-  <div class="grid">
-    <div class="card">“Comecei a ganhar dinheiro em 2 semanas!”</div>
-    <div class="card">“Curso simples e direto ao ponto.”</div>
-    <div class="card">“Já fiz minha primeira venda!”</div>
-  </div>
-</section>
-
-<!-- CONTADOR -->
-<section class="section">
-  <h2>Promoção termina em:</h2>
-  <div id="countdown"></div>
-</section>
-
-<!-- WHATSAPP FLUTUANTE -->
-<a href="https://wa.me/258858829688" class="whatsapp" target="_blank">💬</a>
-
-<script src="script.js"></script>
-</body>
-  </html>
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
+}
