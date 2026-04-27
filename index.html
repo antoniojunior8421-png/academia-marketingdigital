@@ -6,109 +6,149 @@
 
 <title>Academia de Marketing Digital</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* FUNDO COM LOGO */
-body{
+/* RESET */
+*{
   margin:0;
-  font-family:Poppins;
-  background:#0a0f1c;
-  color:white;
-  position:relative;
+  padding:0;
+  box-sizing:border-box;
 }
 
+body{
+  font-family:Poppins;
+  background:#020617;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* FUNDO COM LOGO */
 body::before{
   content:"";
   position:fixed;
   width:100%;
   height:100%;
-  background:url("logo.png") center/350px no-repeat;
-  opacity:0.04;
+  background:url("./logo.png") center/400px no-repeat;
+  opacity:0.03;
   z-index:-1;
 }
 
-/* NAVBAR */
-.nav{
+/* NAV */
+nav{
   display:flex;
   justify-content:space-between;
-  padding:15px;
+  padding:15px 20px;
   background:#020617;
+  position:sticky;
+  top:0;
 }
 
-.nav a{
+nav h2{
+  color:#22c55e;
+}
+
+nav a{
   color:#ccc;
+  margin-left:15px;
   text-decoration:none;
-  margin:0 10px;
 }
 
 /* HERO */
 .hero{
   height:100vh;
-  background:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d') center/cover;
-}
-
-.overlay{
-  background:rgba(0,0,0,0.8);
-  height:100%;
+  background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.9)),
+  url("https://images.unsplash.com/photo-1498050108023-c5249f4df085") center/cover;
   display:flex;
-  flex-direction:column;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
   text-align:center;
 }
 
-.logo{
-  width:100px;
+.hero h1{
+  font-size:32px;
+  margin-bottom:15px;
+}
+
+.hero p{
+  color:#ccc;
   margin-bottom:20px;
 }
 
-/* BOTÕES */
 .btn{
   background:linear-gradient(45deg,#22c55e,#16a34a);
-  padding:12px 20px;
-  border-radius:8px;
+  padding:12px 25px;
+  border-radius:10px;
+  color:#fff;
   text-decoration:none;
-  color:white;
-  margin-top:10px;
-}
-
-.btn-small{
-  background:#2563eb;
-  padding:8px 12px;
-  border-radius:6px;
-  text-decoration:none;
-  color:white;
+  font-weight:bold;
 }
 
 /* SEÇÕES */
 .section{
-  padding:40px;
+  padding:60px 20px;
   text-align:center;
 }
 
-.dark{
-  background:#111827;
+.section h2{
+  margin-bottom:20px;
 }
 
 /* GRID */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:15px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
 }
 
-/* CARDS */
+/* CARD */
 .card{
-  background:#1f2937;
+  background:#111827;
   padding:20px;
-  border-radius:10px;
+  border-radius:12px;
   transition:0.3s;
 }
 
 .card:hover{
-  transform:scale(1.05);
+  transform:translateY(-5px);
+}
+
+/* STATS */
+.stats{
+  display:flex;
+  justify-content:space-around;
+  margin-top:20px;
+}
+
+.stat{
+  font-size:20px;
+}
+
+/* TESTEMUNHOS */
+.testimonial{
+  background:#1f2937;
+  padding:15px;
+  border-radius:10px;
+}
+
+/* FAQ */
+.faq{
+  text-align:left;
+  max-width:600px;
+  margin:auto;
+}
+
+.faq div{
+  margin-bottom:15px;
+}
+
+/* FOOTER */
+footer{
+  padding:30px;
+  text-align:center;
+  background:#020617;
+  color:#aaa;
 }
 
 /* WHATSAPP */
@@ -122,110 +162,141 @@ body::before{
   font-size:20px;
 }
 
+/* ANIMAÇÃO */
+.fade{
+  animation:fade 1s ease;
+}
+
+@keyframes fade{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="nav">
+<!-- NAV -->
+<nav>
   <h2>ANT</h2>
   <div>
     <a href="#">Início</a>
     <a href="#cursos">Cursos</a>
-    <a href="#sobre">Sobre</a>
+    <a href="#faq">FAQ</a>
   </div>
 </nav>
 
 <!-- HERO -->
-<header class="hero">
-  <div class="overlay">
-    
-    <img src="logo.png" class="logo">
-
-    <h1>Transforme seu celular em uma máquina de dinheiro</h1>
-    <p>Aprenda estratégias reais para ganhar dinheiro online começando do zero</p>
-
-    <a class="btn" href="https://wa.me/258858829688" target="_blank">
-      Começar Agora
-    </a>
-
+<section class="hero fade">
+  <div>
+    <h1>Ganhe dinheiro online usando apenas o seu celular</h1>
+    <p>Aprenda métodos simples e reais que já ajudaram centenas de alunos</p>
+    <a href="https://wa.me/258858829688" class="btn">Começar Agora</a>
   </div>
-</header>
+</section>
+
+<!-- PROVA SOCIAL -->
+<section class="section">
+  <h2>Resultados Reais</h2>
+
+  <div class="stats">
+    <div class="stat">+1000 alunos</div>
+    <div class="stat">+50.000 MZN gerados</div>
+    <div class="stat">Método testado</div>
+  </div>
+</section>
 
 <!-- APRENDIZADO -->
 <section class="section">
   <h2>O que você vai aprender</h2>
 
   <div class="grid">
-    <div class="card">📱 Ganhar dinheiro com WhatsApp</div>
-    <div class="card">📘 Vendas no Facebook</div>
-    <div class="card">📸 Instagram</div>
-    <div class="card">🎵 TikTok</div>
+    <div class="card">📱 WhatsApp Marketing</div>
+    <div class="card">📸 Instagram Crescimento</div>
+    <div class="card">🎵 TikTok Estratégias</div>
+    <div class="card">📘 Facebook Vendas</div>
     <div class="card">💻 Hotmart</div>
     <div class="card">💸 ClickBank</div>
     <div class="card">📚 Criar eBooks</div>
+    <div class="card">🔥 Técnicas de vendas</div>
   </div>
 </section>
 
 <!-- CURSOS -->
-<section id="cursos" class="section dark">
-  <h2>Cursos Premium</h2>
+<section id="cursos" class="section">
+  <h2>Cursos Disponíveis</h2>
 
   <div class="grid">
 
     <div class="card">
       <h3>Hotmart</h3>
-      <p>Aprenda a vender como afiliado</p>
-      <a href="https://wa.me/258858829688" class="btn-small">Comprar</a>
+      <p>Ganhe com afiliados</p>
+      <a href="https://wa.me/258858829688" class="btn">Comprar</a>
     </div>
 
     <div class="card">
       <h3>ClickBank</h3>
-      <p>Ganhe em dólar online</p>
-      <a href="https://wa.me/258858829688" class="btn-small">Comprar</a>
+      <p>Ganhe em dólar</p>
+      <a href="https://wa.me/258858829688" class="btn">Comprar</a>
     </div>
 
     <div class="card">
       <h3>Redes Sociais</h3>
-      <p>WhatsApp, Instagram e Facebook</p>
-      <a href="https://wa.me/258858829688" class="btn-small">Comprar</a>
+      <p>WhatsApp + Instagram</p>
+      <a href="https://wa.me/258858829688" class="btn">Comprar</a>
     </div>
 
     <div class="card">
-      <h3>eBooks</h3>
-      <p>Crie e venda seus produtos</p>
-      <a href="https://wa.me/258858829688" class="btn-small">Comprar</a>
+      <h3>eBook</h3>
+      <p>Crie seu produto</p>
+      <a href="https://wa.me/258858829688" class="btn">Comprar</a>
     </div>
 
   </div>
 </section>
 
-<!-- DEPOIMENTOS -->
+<!-- TESTEMUNHOS -->
 <section class="section">
-  <h2>Resultados de alunos</h2>
+  <h2>O que dizem os alunos</h2>
 
   <div class="grid">
-    <div class="card">“Já fiz 15.000 MZN”</div>
-    <div class="card">“Funciona mesmo”</div>
-    <div class="card">“Muito simples de aprender”</div>
+    <div class="testimonial">“Já fiz 20.000 MZN com isso!”</div>
+    <div class="testimonial">“Muito fácil de aprender”</div>
+    <div class="testimonial">“Valeu cada centavo”</div>
   </div>
 </section>
 
-<!-- SOBRE -->
-<section id="sobre" class="section dark">
-  <h2>Sobre o Fundador</h2>
-  <p>António Júnior é especialista em marketing digital e ajuda iniciantes a ganhar dinheiro online com métodos simples.</p>
+<!-- FAQ -->
+<section id="faq" class="section">
+  <h2>Perguntas Frequentes</h2>
+
+  <div class="faq">
+    <div><strong>Preciso experiência?</strong><br>Não, é para iniciantes.</div>
+    <div><strong>Funciona mesmo?</strong><br>Sim, são métodos testados.</div>
+    <div><strong>Como recebo o curso?</strong><br>Via WhatsApp.</div>
+  </div>
 </section>
 
-<!-- CTA -->
+<!-- GARANTIA -->
 <section class="section">
-  <h2>Comece agora</h2>
-  <a class="btn" href="https://wa.me/258858829688">Falar no WhatsApp</a>
+  <h2>Garantia</h2>
+  <p>Se não gostar, devolvemos o seu dinheiro.</p>
 </section>
 
-<!-- BOTÃO WHATSAPP -->
+<!-- CTA FINAL -->
+<section class="section">
+  <h2>Comece hoje</h2>
+  <a href="https://wa.me/258858829688" class="btn">Falar no WhatsApp</a>
+</section>
+
+<!-- WHATSAPP -->
 <a href="https://wa.me/258858829688" class="whatsapp">💬</a>
 
+<!-- FOOTER -->
+<footer>
+  © 2026 Academia de Marketing Digital
+</footer>
+
 </body>
-        </html>
+  </html>
