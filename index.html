@@ -1,89 +1,127 @@
-body{
-  margin:0;
-  font-family:Poppins;
-  background:#0f172a;
-  color:#fff;
-}
+here<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.nav{
-  display:flex;
-  justify-content:space-between;
-  padding:15px;
-  background:#020617;
-}
+<title>Academia de Marketing Digital</title>
 
-.nav a{
-  color:white;
-  margin:0 10px;
-  text-decoration:none;
-}
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-.hero{
-  height:100vh;
-  background:url('https://images.unsplash.com/photo-1492724441997-5dc865305da7') center/cover;
-}
+</head>
 
-.overlay{
-  background:rgba(0,0,0,0.7);
-  height:100%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-}
+<body>
 
-.logo{
-  width:120px;
-  margin-bottom:20px;
-}
+<!-- NAVBAR -->
+<nav class="nav">
+  <h2>ANT</h2>
+  <div>
+    <a href="#">Início</a>
+    <a href="#cursos">Cursos</a>
+    <a href="#sobre">Sobre</a>
+  </div>
+</nav>
 
-.btn{
-  background:#22c55e;
-  padding:12px 20px;
-  border-radius:8px;
-  text-decoration:none;
-  color:white;
-}
+<!-- HERO -->
+<header class="hero">
+  <div class="overlay">
+    
+    <img src="logo.png" class="logo">
 
-.section{
-  padding:40px;
-  text-align:center;
-}
+    <h1>Ganhe dinheiro na internet com o seu celular</h1>
+    <p>Aprenda estratégias simples que funcionam mesmo começando do zero</p>
 
-.dark{
-  background:#1e293b;
-}
+    <a class="btn" href="https://wa.me/258858829688" target="_blank">
+      Começar Agora
+    </a>
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:15px;
-}
+  </div>
+</header>
 
-.card{
-  background:#111827;
-  padding:20px;
-  border-radius:10px;
-}
+<!-- PROVA SOCIAL -->
+<section class="stats">
+  <div>+500 Alunos</div>
+  <div>+1.000 Vendas</div>
+  <div>100% Online</div>
+</section>
 
-.card img{
-  width:50px;
-}
+<!-- SOBRE -->
+<section id="sobre" class="section">
+  <h2>Sobre o Fundador</h2>
+  <p>António Júnior é especialista em marketing digital e já ajudou centenas de pessoas a ganhar dinheiro online.</p>
+</section>
 
-.stats{
-  display:flex;
-  justify-content:space-around;
-  padding:20px;
-  background:#020617;
-}
+<!-- BENEFÍCIOS -->
+<section class="section dark">
+  <h2>Por que escolher este curso?</h2>
+  <div class="grid">
+    <div class="card">📱 Funciona só com celular</div>
+    <div class="card">💰 Métodos testados</div>
+    <div class="card">⚡ Resultados rápidos</div>
+    <div class="card">🎯 Passo a passo simples</div>
+  </div>
+</section>
 
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  padding:15px;
-  border-radius:50%;
-  text-decoration:none;
-}
+<!-- CURSOS -->
+<section id="cursos" class="section">
+  <h2>Cursos</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+      <h3>WhatsApp</h3>
+      <a href="#" class="btn-small">Comprar</a>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+      <h3>Facebook</h3>
+      <a href="#" class="btn-small">Comprar</a>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png">
+      <h3>Instagram</h3>
+      <a href="#" class="btn-small">Comprar</a>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
+      <h3>TikTok</h3>
+      <a href="#" class="btn-small">Comprar</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- URGÊNCIA -->
+<section class="section">
+  <h2>Promoção acaba em:</h2>
+  <div id="countdown"></div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="section dark">
+  <h2>Resultados de alunos</h2>
+  <div class="grid">
+    <div class="card">“Já fiz 10.000 MZN em 1 mês”</div>
+    <div class="card">“Melhor investimento que fiz”</div>
+    <div class="card">“Muito fácil de entender”</div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section">
+  <h2>Pronto para mudar sua vida?</h2>
+  <a class="btn" href="https://wa.me/258858829688">Falar no WhatsApp</a>
+</section>
+
+<!-- BOTÃO FLUTUANTE -->
+<a href="https://wa.me/258858829688" class="whatsapp">💬</a>
+
+<script src="script.js"></script>
+
+</body>
+  </html>
